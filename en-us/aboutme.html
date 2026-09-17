@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <meta charset="UTF-8">
+    <!-- 關鍵宣告：告知 WebKit 引擎本頁面支援 Light 與 Dark 雙模式 -->
+    <meta name="color-scheme" content="light dark">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>About Me</title>
+    <style>
+        /* 2. 基礎色彩變數（預設：Light Mode 淺色模式） */
+        :root {
+            --text-primary: #1c1c1e;               /* 淺色模式主要文字（深黑石板色） */
+            --text-secondary: #636366;             /* 淺色模式次要文字 */
+            --card-bg: rgba(255, 255, 255, 0.65);  /* 毛玻璃卡片背景 */
+            --card-border: rgba(255, 255, 255, 0.8);
+            --card-shadow: 0 8px 32px rgba(62, 100, 114, 0.08);
+            --accent-color: #3e6472;               /* 與 App 主題色一致的 Ethereal Primary */
+        }
+        /* 3. 深色模式色彩變數（當系統切換至 Dark Mode 時自動生效） */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text-primary: #f2f2f7;           /* 深色模式主要文字（純白／雪白） */
+                --text-secondary: #aeaeb2;         /* 深色模式次要文字 */
+                --card-bg: rgba(28, 28, 30, 0.65); /* 深色毛玻璃卡片背景 */
+                --card-border: rgba(255, 255, 255, 0.15);
+                --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+                --accent-color: #75a7b8;
+            }
+        }
+        /* 4. 排版與毛玻璃視覺適配 */
+        body {
+            margin: 0;
+            padding: 24px 20px;
+            /* 保持透明以透出 App 本身的 BackgroundGradientView */
+            background-color: transparent;
+            color: var(--text-primary);
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+            line-height: 1.75;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+        .content-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 28px 24px;
+            box-shadow: var(--card-shadow);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+            letter-spacing: -0.5px;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 18px;
+            color: var(--text-primary);
+        }
+        p.quote {
+            font-style: italic;
+            color: var(--text-secondary);
+            border-left: 3px solid var(--accent-color);
+            padding-left: 14px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-card">
+            <p class="paragraph">
+                My journey with snooker has taught me that the game is far more than just potting balls—it is an art of deep focus, precision, and relentless self-refinement.
+            </p>
+            <p class="paragraph">
+                As a self-taught player moving from the basics to advanced cueing and position play, I understand firsthand how challenging it can be to improve without a dedicated coach. I built this app to integrate all the essential tools I wished I had along the way—from match scoring to structured error analysis and training logs. My goal is to support fellow players who share the same passion, helping you practice smarter and track every bit of your progress.
+            </p>
+            <p class="paragraph">
+                My ultimate dream is to compete on the professional international stage and see just how far this dedication can take me. If this app brings value to your game, or if you’d like to back my journey and training, any support—even just the price of a coffee—means the world to me.
+            </p>
+            <p class="paragraph">
+                Thank you for being part of this journey. See you at the table!
+            </p>
+        </div>
+    </div>
+</body>
+</html>

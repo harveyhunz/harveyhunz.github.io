@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <!-- 關鍵宣告：告知 WebKit 引擎本頁面支援 Light 與 Dark 雙模式 -->
+    <meta name="color-scheme" content="light dark">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>About Me</title>
+    <style>
+        /* 2. 基礎色彩變數（預設：Light Mode 淺色模式） */
+        :root {
+            --text-primary: #1c1c1e;               /* 淺色模式主要文字（深黑石板色） */
+            --text-secondary: #636366;             /* 淺色模式次要文字 */
+            --card-bg: rgba(255, 255, 255, 0.65);  /* 毛玻璃卡片背景 */
+            --card-border: rgba(255, 255, 255, 0.8);
+            --card-shadow: 0 8px 32px rgba(62, 100, 114, 0.08);
+            --accent-color: #3e6472;               /* 與 App 主題色一致的 Ethereal Primary */
+        }
+        /* 3. 深色模式色彩變數（當系統切換至 Dark Mode 時自動生效） */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text-primary: #f2f2f7;           /* 深色模式主要文字（純白／雪白） */
+                --text-secondary: #aeaeb2;         /* 深色模式次要文字 */
+                --card-bg: rgba(28, 28, 30, 0.65); /* 深色毛玻璃卡片背景 */
+                --card-border: rgba(255, 255, 255, 0.15);
+                --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+                --accent-color: #75a7b8;
+            }
+        }
+        /* 4. 排版與毛玻璃視覺適配 */
+        body {
+            margin: 0;
+            padding: 24px 20px;
+            /* 保持透明以透出 App 本身的 BackgroundGradientView */
+            background-color: transparent;
+            color: var(--text-primary);
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+            line-height: 1.75;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+        .content-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 28px 24px;
+            box-shadow: var(--card-shadow);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+            letter-spacing: -0.5px;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 18px;
+            color: var(--text-primary);
+        }
+        p.quote {
+            font-style: italic;
+            color: var(--text-secondary);
+            border-left: 3px solid var(--accent-color);
+            padding-left: 14px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-card">
+            <p class="paragraph">
+                在追求司諾克的這條路上，我始終相信這項運動不僅是技巧的比拼，更是極致專注與自我對話的過程。
+            </p>
+            <p class="paragraph">
+                從握桿摸索的初學者，到一步步拆解球型、追求穩定走位的進階階段，身為自學者，我深知在沒有專屬教練的情況下，每一次復盤與練習工具的累積有多麼重要。正因如此，我打造了這款 App——把自己在練習、計分與失誤分析中所需要的一切功能整合起來，希望能陪伴每一位同樣在球台旁默默耕耘的自學者，少走一些彎路。
+            </p>
+            <p class="paragraph">
+                我的夢想是有一天能站上正式的國際賽事舞台，為自己的熱愛全力一搏。如果你覺得這款 App 對你的練習有所幫助，或願意支持我的訓練與追夢旅程，哪怕是一杯咖啡的贊助，對我而言都是無比巨大的肯定與前進的動力。
+            </p>
+            <p class="paragraph">
+                感謝每一位熱愛司諾克的你，我們球桌上見！
+            </p>
+        </div>
+    </div>
+</body>
+</html>
